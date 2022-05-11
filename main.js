@@ -23,9 +23,7 @@ const getSnomedValueSet = async (url, valueSetName) => {
     const response = await axios.get(url);
     const children = response.data.expansion.contains;
     console.log(`~~~~~ types of ${valueSetName} ~~~~~`);
-    children.forEach(child => {
-        console.log(child.display);
-    });
+    children.forEach(child => console.log(child.display));
     console.log();
 }
 
